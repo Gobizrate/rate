@@ -4,15 +4,15 @@ import {get,postWithToken} from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.6/c
 import {getCookie} from "https://cdn.jsdelivr.net/gh/jscroot/cookie@0.0.1/croot.js";
 
 
-get("https://api.do.my.id/notif/ux/getlaporan/"+getHash(),runafterGet)
+get("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/tiket/closed/"+getHash(),runafterGet)
 
 onClick("tombol",runOnRating);
 
 function runafterGet(result){
     console.log(result);
-    setInner("petugas",result.petugas);
+    setInner("petugas",result.adminname);
     // Mengganti \n dengan <br> untuk menampilkan baris baru
-    let solusiDenganBarisBaru = result.solusi.replace(/\n/g, "<br>");
+    let solusiDenganBarisBaru = result.adminmessage.replace(/\n/g, "<br>");
     setInner("solusi", solusiDenganBarisBaru);
 }
 
@@ -23,7 +23,7 @@ function runOnRating(){
         komentar:getValue("komentar")
     }
     setInner("feedback","Mohon tunggu sebentar data sedang dikirim");
-    postWithToken("https://api.do.my.id/notif/ux/postrating","login",getCookie("login"),datarating,responseFunction);
+    postWithToken("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/tiket/rate","login",getCookie("login"),datarating,responseFunction);
 }
 
 function responseFunction(result){
