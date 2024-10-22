@@ -101,8 +101,18 @@
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
   }
+
+  #rating-1:hover ~ .emoji-wrapper > .emoji {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
   
   #rating-2:checked ~ .emoji-wrapper > .emoji {
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
+  }
+
+  #rating-2:hover ~ .emoji-wrapper > .emoji {
     -webkit-transform: translateY(-200px);
             transform: translateY(-200px);
   }
@@ -111,13 +121,28 @@
     -webkit-transform: translateY(-300px);
             transform: translateY(-300px);
   }
+
+  #rating-3:hover ~ .emoji-wrapper > .emoji {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
   
   #rating-4:checked ~ .emoji-wrapper > .emoji {
     -webkit-transform: translateY(-400px);
             transform: translateY(-400px);
   }
+
+  #rating-4:hover ~ .emoji-wrapper > .emoji {
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+  }
   
   #rating-5:checked ~ .emoji-wrapper > .emoji {
+    -webkit-transform: translateY(-500px);
+            transform: translateY(-500px);
+  }
+
+  #rating-5:hover ~ .emoji-wrapper > .emoji {
     -webkit-transform: translateY(-500px);
             transform: translateY(-500px);
   }
