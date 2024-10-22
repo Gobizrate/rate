@@ -22,7 +22,17 @@ function runOnRating(){
         rating:Number(getValueRadio("rating")),
         komentar:getValue("komentar")
     }
-    setInner("feedback","Mohon tunggu sebentar data sedang dikirim");
+    setInner("feedback",
+        `
+        <div class="py-12">
+            <div class="loader"></div>
+        </div>
+        <div  class="py-12">
+            <p>Mohon tunggu sebentar</p>
+            <p> Data sedang dikirim . . .</p>
+        </div>
+        `
+    );
     postWithToken("https://asia-southeast2-awangga.cloudfunctions.net/pamongdesa/data/tiket/rate","login",getCookie("login"),datarating,responseFunction);
 }
 
