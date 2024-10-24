@@ -569,19 +569,17 @@
                             </div>
                             <div class="col-span-12 md:col-span-4 max-lg:mt-8 md:pl-8">
                                 <div class="flex items-center flex-col justify-center w-full h-full ">
-                                    <button
-                                        class="rounded-full px-6 py-4 bg-indigo-600 font-semibold text-lg text-white whitespace-nowrap mb-6 w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">Write
+                                    <button class="rounded-full px-6 py-4 bg-indigo-600 font-semibold text-lg text-white whitespace-nowrap mb-6 w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400" onclick="return window.location.href= 'index.html'">Write
                                         A Review</button>
-                                    <button
-                                        class="rounded-full px-6 py-4 bg-white font-semibold text-lg text-indigo-600 whitespace-nowrap w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">See
-                                        All Reviews</button>
+                                    <a href="#allreview" class="rounded-full px-6 py-4 bg-white font-semibold text-lg text-indigo-600 whitespace-nowrap w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">See
+                                        All Reviews</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="pb-8 border-b border-gray-200 max-xl:max-w-3xl max-xl:mx-auto">
-                    <h4 class="font-manrope font-semibold text-3xl leading-10 text-black mb-6 text-white">Most helpful positive
+                    <h4 id="allreview" class="font-manrope font-semibold text-3xl leading-10 text-black mb-6 text-white">Most helpful positive
                         review</h4>
                     <div class="flex sm:items-center flex-col sm:flex-row justify-between  mb-4">
                         <div class="flex items-center gap-3">
@@ -663,15 +661,16 @@
                         of design components, making it a go-to for creating visually stunning and consistent
                         interfaces.
                     </p>
-
-                </div>
-               
+                </div>            
     </section>
                                                 
   
+    <!-- ALL REVIEW -->
       <div class="mt-6 divide-y divide-gray-200 dark:divide-gray-700">
         <div class="gap-3 pb-6 sm:flex sm:items-start">
           <div class="shrink-0 space-y-2 sm:w-48 md:w-72">
+
+            
            <!-- Rating -->
 <div class="flex flex-row-reverse justify-end items-center">
   <input id="hs-ratings-readonly-1" type="radio" class="peer -ms-5 size-5 bg-transparent border-0 text-transparent cursor-pointer appearance-none checked:bg-none focus:bg-none focus:ring-0 focus:ring-offset-0" name="hs-ratings-readonly" value="1">
@@ -706,6 +705,7 @@
   </label>
 </div>
 <!-- End Rating -->
+
             <div class="space-y-0.5">
               <p class="text-base font-semibold text-gray-900 dark:text-white">Micheal Gough</p>
               <p class="text-sm font-normal text-gray-500 dark:text-gray-400">November 18 2023 at 15:35</p>
