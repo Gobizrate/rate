@@ -76,15 +76,16 @@ body {
 /* Feedback Form */
 .feedback {
     max-width: 600px;
+    /* width: 100%; */
     margin: 1rem auto;
     padding: 3rem;
     background-color: var(--bs-white);
     border-radius: var(--bs-border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 4 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .feedback h5 {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     text-align: center;
     color: var(--bs-dark);
 }
