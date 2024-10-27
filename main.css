@@ -90,12 +90,13 @@
     transition: .3s;
   }
   
-  .emoji > svg {
+  .emoji > img {
     margin: 15px 0;
     width: 70px;
     height: 70px;
     flex-shrink: 0;
-  }
+    transition: opacity 0.3s; /* Smooth transition for opacity changes */
+}
   
   #rating-1:checked ~ .emoji-wrapper > .emoji {
     -webkit-transform: translateY(-100px);
