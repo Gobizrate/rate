@@ -952,49 +952,11 @@
             </div>
         </div>
 
-       <!-- Add the following JavaScript at the bottom of your HTML file or in a separate script -->
-<script>
-
- // Get all stars with the class 'star'
- document.querySelectorAll('.star').forEach((star) => {
-    star.addEventListener('click', function () {
-        const index = this.getAttribute('data-index');
-        const stars = this.parentElement.querySelectorAll('.star');
-        
-        // Loop through all stars in this group
-        stars.forEach((s, i) => {
-            if (i < index) {
-                s.classList.add('text-yellow-500');  // Change to yellow
-                s.classList.remove('text-slate-800'); // Remove default color
-            } else {
-                s.classList.remove('text-yellow-500');
-                s.classList.add('text-slate-800');
-            }
-        });
-    });
-});
-
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  const stars = document.querySelectorAll('.star');
-    stars.forEach(star => {
-        star.addEventListener('click', function() {
-            const index = parseInt(star.getAttribute('data-index'));
-            stars.forEach((s, i) => {
-                s.classList.toggle('active-star', i < index);
-            });
-        });
-    });
-</script>
- 
+       <!-- Add the following JavaScript at the bottom of your HTML file or in a separate script --> 
     <script src="static/js/app.js"></script>
     <script async src="main.js" type="module"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/js/viewrate.js"></script>
 </body>
 
 </html>
