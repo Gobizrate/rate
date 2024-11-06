@@ -41,11 +41,3 @@ function responseFunction(result){
     setInner("feedback","Feedback berhasil dikirim terima kasih. "+result.info);
 
 }
-
-document.getElementById('tombolBatal').addEventListener('click', function() {
-    // Uncheck all radio buttons with name 'rating'
-    const radios = document.querySelectorAll('input[name="rating"]');
-    radios.forEach(radio => {
-        radio.checked = false;
-    });
-});
