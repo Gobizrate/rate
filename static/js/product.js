@@ -17,11 +17,16 @@ export default function products() {
       const status = res.status;
       const result = await res.json();
 
-      console.log(result);
+      // Log the fetched data to the console
+      console.log("Fetched data:", result);
+
       if (status === 200) {
         const productsContainer = document.querySelector(".grid"); // Select grid container
 
         result.data.forEach((product) => {
+          // Log each product to verify the data
+          console.log("Adding product:", product);
+
           // Create product card container
           const productCard = document.createElement("div");
           productCard.style.backgroundImage = `url(${product.image})`;
@@ -30,7 +35,11 @@ export default function products() {
 
           // Badge Top
           const badgeTop = document.createElement("div");
-          badgeTop.classList.add("absolute", "top-2", "right-2", "bg-red-500", "text-white", "text-xs", "font-semibold", "px-2", "py-1", "rounded", "transform", "rotate-25");
+          badgeTop.classList.add(
+            "absolute", "top-2", "right-2", "bg-red-500", "text-white",
+            "text-xs", "font-semibold", "px-2", "py-1", "rounded", "transform",
+            "rotate-25"
+          );
           badgeTop.textContent = "Top";
 
           // Content Card
@@ -94,6 +103,9 @@ export default function products() {
 
           // Append the product card to the grid container
           productsContainer.appendChild(productCard);
+
+          // Log the added product card to confirm it's added to the DOM
+          console.log("Product card added to DOM:", product.menu);
         });
       } else {
         console.error("Failed to fetch products:", status);
