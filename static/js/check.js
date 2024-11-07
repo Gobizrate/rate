@@ -12,8 +12,15 @@ function checkLoginAndSubmit() {
 
     if (!token) {
         // Jika token tidak ada, arahkan ke halaman login
-        alert("Silakan login terlebih dahulu untuk memberikan rating.");
-        window.location.href = "https://go.biz.id/login"; // Sesuaikan dengan URL halaman login
+        Swal.fire({
+            icon: 'warning',
+            title: 'Anda belum login',
+            text: 'Silakan login terlebih dahulu untuk memberikan rating.',
+            confirmButtonText: 'Login'
+        }).then(() => {
+            // Setelah OK diklik, arahkan ke halaman login
+            window.location.href = "https://go.biz.id/login";
+        });
     } else {
         // Jika token ada, lanjutkan proses pengiriman rating/komentar
         submitComment(); // Fungsi untuk mengirim komentar, implementasikan sesuai kebutuhan
